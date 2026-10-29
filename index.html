@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adrian Dev is a full-stack developer building scalable web applications and thoughtful user experiences.">
+    <title>Portfolio | Full-Stack Developer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body
+    class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- NAV BAR -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-800/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- Logo / Brand -->
+            <a href="#home" class="flex items-center gap-2 group">
+                <span
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                    &lt;/&gt;
+                </span>
+                <span class="text-lg font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+                    Dev<span class="text-indigo-500">Portfolio</span>
+                </span>
+            </a>
+
+            <!-- Availability Badge & Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <!-- Status Badge -->
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Available for projects
+                </div>
+
+                <!-- Nav Links -->
+                <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-indigo-400 transition-colors">Home</a>
+                    <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-indigo-400 transition-colors">About</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 px-4 pt-2 pb-6 space-y-4">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium my-2">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Available for freelance work
+            </div>
+            <a href="#home"
+                class="block py-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors">Home</a>
+            <a href="#skills"
+                class="block py-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors">Skills</a>
+            <a href="#projects"
+                class="block py-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors">Projects</a>
+            <a href="#experience"
+                class="block py-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors">About</a>
+            <a href="#contact"
+                class="block py-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+
+        <!-- HERO SECTION -->
+        <section id="home"
+            class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <!-- Background Glow Gradients -->
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute top-1/3 right-10 w-80 h-80 bg-violet-600/15 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <!-- Greeting Badge -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-slate-300 text-sm mb-8 animate-fade-in">
+                    <span class="text-indigo-400"><i class="fa-solid fa-code"></i></span>
+                    Hello, I'm <span class="text-white font-semibold">Adrian Dev</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1
+                    class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    <span
+                        class="bg-gradient-to-r from-indigo-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">Full-Stack</span>
+                    Developer
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed font-normal">
+                    I specialize in building complete, scalable, high-performance web applications. I have a strong
+                    background in resilient backend development with <span class="text-slate-200 font-medium">Node.js,
+                        Express, and PHP/Laravel</span>, paired with dynamic interfaces built using <span
+                        class="text-slate-200 font-medium">React, TypeScript, and Tailwind CSS</span>.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <a href="#projects"
+                        class="w-full sm:w-auto px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 group">
+                        View my projects
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact"
+                        class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Get in touch
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center justify-center gap-6 text-slate-400">
+                    <a href="https://github.com/AdrianBarajas" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-indigo-400 text-2xl transition-colors p-2" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adrian-barajas-dev/" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-indigo-400 text-2xl transition-colors p-2" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:adrian.barajas.casillas@gmail.com" class="hover:text-indigo-400 text-2xl transition-colors p-2"
+                        title="Send email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS MATRIX -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Skills & Technologies</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">A look at my core technical toolkit and development stacks.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend -->
+                <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-react text-cyan-400 text-base"></i> React / Next.js
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-code text-blue-400 text-base"></i> TypeScript / JS ES6+
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-css3-alt text-teal-400 text-base"></i> Tailwind CSS
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-html5 text-orange-400 text-base"></i> HTML5 / CSS3 / SASS
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-node-js text-emerald-400 text-base"></i> Node.js / Express
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-laravel text-red-500 text-base"></i> PHP / Laravel
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-network-wired text-indigo-400 text-base"></i> RESTful APIs / GraphQL
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-shield-halved text-amber-400 text-base"></i> JWT / OAuth
+                            Authentication
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Databases -->
+                <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Databases</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-database text-blue-500 text-base"></i> PostgreSQL
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-database text-amber-500 text-base"></i> MySQL / MariaDB
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-leaf text-emerald-500 text-base"></i> MongoDB
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-bolt text-red-400 text-base"></i> Redis (Caching)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Testing -->
+                <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-git-alt text-orange-500 text-base"></i> Git / GitHub / GitLab
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-brands fa-docker text-sky-400 text-base"></i> Docker / Containers
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-vial text-purple-400 text-base"></i> Jest / Cypress
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-cloud text-indigo-400 text-base"></i> Vercel / Render / AWS
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS WITH INTERACTIVE FILTERS -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">A selection of recent projects spanning full-stack
+                    solutions, API architectures, and interactive UI design.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                <button
+                    class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-indigo-600 text-white"
+                    data-filter="all" aria-pressed="true">All</button>
+                <button
+                    class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+                <button
+                    class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    data-filter="frontend" aria-pressed="false">Frontend</button>
+                <button
+                    class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    data-filter="backend" aria-pressed="false">Backend / APIs</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- Project 1: Fullstack -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.02]"
+                    data-category="fullstack">
+                    <div class="relative h-48 overflow-hidden bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+                            alt="Travel destination"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <span
+                            class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-900/80 text-indigo-400 text-xs font-semibold backdrop-blur-md border border-indigo-500/30">
+                            Full-Stack
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">Travel Booking Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A complete real-time tour booking system with
+                            integrated payments and an admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">React</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Node.js</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">PostgreSQL</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Tailwind</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <button data-project-id="1"
+                                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </button>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="text-slate-400 hover:text-white transition-colors text-lg"
+                                    title="GitHub repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-lg"
+                                    title="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Frontend -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.02]"
+                    data-category="frontend">
+                    <div class="relative h-48 overflow-hidden bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+                            alt="Interactive Pokédex interface"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <span
+                            class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-900/80 text-cyan-400 text-xs font-semibold backdrop-blur-md border border-cyan-500/30">
+                            Frontend
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">Interactive Pokédex UI</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A dynamic web app with advanced filters,
+                            instant search, stat charts, and smooth CSS animations.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">TypeScript</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">React</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">REST
+                                API</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <button data-project-id="2"
+                                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </button>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="text-slate-400 hover:text-white transition-colors text-lg"
+                                    title="GitHub repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-lg"
+                                    title="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Backend -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.02]"
+                    data-category="backend">
+                    <div class="relative h-48 overflow-hidden bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+                            alt="API E-Commerce"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <span
+                            class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-900/80 text-violet-400 text-xs font-semibold backdrop-blur-md border border-violet-500/30">
+                            Backend
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">E-Commerce RESTful API</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A scalable API for managing inventory, shopping
+                            carts, orders, and JWT-based authentication.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Express</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">MongoDB</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">JWT</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Jest</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <button data-project-id="3"
+                                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </button>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="text-slate-400 hover:text-white transition-colors text-lg"
+                                    title="GitHub repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-lg"
+                                    title="API documentation"><i class="fa-solid fa-file-code"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Fullstack -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.02]"
+                    data-category="fullstack">
+                    <div class="relative h-48 overflow-hidden bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80"
+                            alt="Developer task manager"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <span
+                            class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-900/80 text-indigo-400 text-xs font-semibold backdrop-blur-md border border-indigo-500/30">
+                            Full-Stack
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">Collaborative Kanban Board</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A Trello-style app with real-time WebSocket
+                            updates for development teams.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Laravel</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Vue.js</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">MySQL</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Pusher</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                            <button data-project-id="4"
+                                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </button>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="text-slate-400 hover:text-white transition-colors text-lg"
+                                    title="GitHub repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-lg"
+                                    title="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT / EXPERIENCE -->
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">About Me & Experience</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full mb-4"></div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 mb-12">
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    I'm a technology enthusiast with over 3 years of experience creating end-to-end digital solutions. I
+                    focus on writing clean, maintainable code that follows best practices. I enjoy solving complex
+                    backend problems and turning them into simple, intuitive interfaces for end users.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-indigo-500/30 ml-4 md:ml-32 space-y-12">
+
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 group">
+                    <div
+                        class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-indigo-500 group-hover:bg-indigo-500 transition-colors">
+                    </div>
+                    <span
+                        class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2 inline-block">2024
+                        - 2026</span>
+                    <h3 class="text-xl font-bold text-white">Back End Developer</h3>
+                    <p class="text-slate-400 text-sm mb-2">Mex Rent a Car.</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">LI built the backend for a van rental website,
+                        integrating it with our reservation system through a REST API to enable seamless booking
+                        management and data flow.
+                        Also developed an internal travel expense management system for the company using Laravel,
+                        JavaScript, PHP, and MySQL, integrating it seamlessly with our ERP through an API for efficient
+                        data synchronization and streamlined operations.
+                        Developed a complete car sales system using Laravel, including features for creating and
+                        managing sales orders, integrating a React component for a dynamic grid to edit vehicles, assign
+                        prices, export orders to PDF, and enable digital signatures via DocuSign. Integrated the Libro
+                        Azul API to retrieve reference prices for vehicles, ensuring accurate pricing. Additionally,
+                        implemented a module to import residual costs using PHPExcel to process Excel data and populate
+                        dynamic data tables, managing the entire development lifecycle from backend to frontend.</p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 group">
+                    <div
+                        class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-indigo-500 group-hover:bg-indigo-500 transition-colors">
+                    </div>
+                    <span
+                        class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2 inline-block">2022
+                        - 2024</span>
+                    <h3 class="text-xl font-bold text-white">Jr Software Developer</h3>
+                    <p class="text-slate-400 text-sm mb-2">Luxoft</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">Built websites and e-commerce experiences with
+                        React and Tailwind CSS for more than 15 international clients.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Talk</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400 max-w-xl mx-auto">Have a project in mind or looking to add talent to your team?
+                    Send me a message and I'll get back to you soon.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+                <!-- Contact Info -->
+                <div class="space-y-6 lg:col-span-1">
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-400">Email</h4>
+                            <a href="mailto:adrian.barajas.casillas@gmail.com"
+                                class="text-white font-medium hover:text-indigo-400 transition-colors">adrian.barajas.casillas@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-400">Location</h4>
+                            <p class="text-white font-medium">California, USA (Available for remote work)</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-400">Time Zone</h4>
+                            <p class="text-white font-medium">GMT-7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card p-8 rounded-2xl lg:col-span-2 relative">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full
+                                    name</label>
+                                <input type="text" id="name" required
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                    placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email
+                                    address</label>
+                                <input type="email" id="email" required
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                    placeholder="you@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" required
+                                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                placeholder="Job opportunity / Project">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" required
+                                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors resize-none"
+                                placeholder="Tell me more about what you need..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn"
+                            class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+
+                    <!-- Simulated success message -->
+                    <div id="contact-alert"
+                        class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium text-center">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Message sent successfully! I'll get back to you as
+                        soon as possible.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© <span id="current-year"></span> Adrian Dev. All rights reserved.</p>
+            <p class="flex items-center gap-1">Made with <i class="fa-solid fa-heart text-indigo-500 text-xs"></i> and
+                Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="project-modal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md"
+        role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div
+            class="glass-card bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-slate-700 relative">
+            <button data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl p-2"
+                aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
+            <span id="modal-category"
+                class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-4"></span>
+
+            <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                <p id="modal-description"></p>
+
+                <h4 class="font-semibold text-white text-base pt-2">Key Features & Architecture:</h4>
+                <ul id="modal-features" class="list-disc list-inside space-y-1 text-slate-400"></ul>
+
+                <h4 class="font-semibold text-white text-base pt-2">Technology Stack:</h4>
+                <div id="modal-tech" class="flex flex-wrap gap-2 pt-1"></div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-800 flex justify-end gap-3">
+                <button data-close-modal
+                    class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 text-sm font-medium">Close</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
